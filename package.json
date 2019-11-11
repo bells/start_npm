@@ -1,11 +1,12 @@
 {
-  "name": "start_npm",
+  "name": "bells_start_npm_test",
   "version": "1.0.0",
   "description": "create npm package with typescript",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha test/*.js - - -R spec"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/bells/start_npm#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
     "istanbul": "^0.4.5",
     "mocha": "^6.2.2",
     "typescript": "^3.7.2"
